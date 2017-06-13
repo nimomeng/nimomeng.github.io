@@ -95,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/13/hello-world/" data-id="cj3vd9jz8000074s6ybqx9f4k" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/13/hello-world/" data-id="cj3vdcton000083s6xn0guqkr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -105,9 +105,9 @@
 
 
   
-    <article id="post-Documents/Categories/UIWebView+AFNetworking" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Documents/Protocols/AFURLResponseSerialization" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/06/Documents/Categories/UIWebView+AFNetworking/" class="article-date">
+    <a href="/2017/06/06/Documents/Protocols/AFURLResponseSerialization/" class="article-date">
   <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
 </a>
     
@@ -122,7 +122,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>UIWebView(AFNetworking) Category Reference</title>
+	<title>AFURLResponseSerialization Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -173,21 +173,13 @@
 
 	
 	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/sessionManager">sessionManager</option>
-		
-	</optgroup>
-	
 
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/loadRequest:MIMEType:textEncodingName:progress:success:failure:">- loadRequest:MIMEType:textEncodingName:progress:success:failure:</option>
-		
-		<option value="//api/name/loadRequest:progress:success:failure:">- loadRequest:progress:success:failure:</option>
+		<option value="//api/name/responseObjectForResponse:data:error:">- responseObjectForResponse:data:error:</option>
 		
 	</optgroup>
 	
@@ -204,13 +196,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">UIWebView(AFNetworking) Category Reference</h1>
+					<h1 class="title">AFURLResponseSerialization Protocol Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<th>Conforms to</th>
+	<td>NSCopying<br>NSObject<br>NSSecureCoding</td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>UIWebView+AFNetworking.h<br>UIWebView+AFNetworking.m</td>
+	<td>AFURLResponseSerialization.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -220,7 +215,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This category adds methods to the UIKit framework&rsquo;s <code>UIWebView</code> class. The methods in this category provide increased control over the request cycle, including progress monitoring and success / failure handling.</p><p>When using these category methods, make sure to assign <code>delegate</code> for the web view, which implements <code>–webView:shouldStartLoadWithRequest:navigationType:</code> appropriately. This allows for tapped links to be loaded through AFNetworking, and can ensure that <code>canGoBack</code> &amp; <code>canGoForward</code> update their values correctly.</p>
+						<p>The <code>AFURLResponseSerialization</code> protocol is adopted by an object that decodes data into a more useful object representation, according to details in the server response. Response serializers may additionally perform validation on the incoming response and data.</p>
+
+<p>For example, a JSON response serializer may check for an acceptable status code (<code>2XX</code> range) and content type (<code>application/json</code>), decoding a valid JSON response into an object.</p>
 					</div>
 					
 					
@@ -236,9 +233,9 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/sessionManager" title="sessionManager"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sessionManager">&nbsp;&nbsp;sessionManager</a></code>
-</h3>
+	<a name="//api/name/responseObjectForResponse:data:error:" title="responseObjectForResponse:data:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseObjectForResponse:data:error:">&ndash;&nbsp;responseObjectForResponse:data:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -246,13 +243,9 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>The session manager used to download all requests.</p>
-			</div>
-			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) AFHTTPSessionManager *sessionManager</code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable id)responseObjectForResponse:(nullable NSURLResponse *)<em>response</em> data:(nullable NSData *)<em>data</em> error:(NSError *_Nullable __autoreleasing *)<em>error</em></code></div>
 
 		    
 			
@@ -270,153 +263,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UIWebView+AFNetworking.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/loadRequest:progress:success:failure:" title="loadRequest:progress:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loadRequest:progress:success:failure:">&ndash;&nbsp;loadRequest:progress:success:failure:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Asynchronously loads the specified request.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)loadRequest:(NSURLRequest *)<em>request</em> progress:(NSProgress *_Nullable __autoreleasing *_Nullable)<em>progress</em> success:(nullable NSString *( ^ ) ( NSHTTPURLResponse *response , NSString *HTML ))<em>success</em> failure:(nullable void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>request</code></th>
-						<td><p>A URL request identifying the location of the content to load. This must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>progress</code></th>
-						<td><p>A progress object monitoring the current download progress.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>success</code></th>
-						<td><p>A block object to be executed when the request finishes loading successfully. This block returns the HTML string to be loaded by the web view, and takes two arguments: the response, and the response string.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>failure</code></th>
-						<td><p>A block object to be executed when the data task finishes unsuccessfully, or that finishes successfully, but encountered an error while parsing the response data. This block has no return value and takes a single argument: the error that occurred.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UIWebView+AFNetworking.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/loadRequest:MIMEType:textEncodingName:progress:success:failure:" title="loadRequest:MIMEType:textEncodingName:progress:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loadRequest:MIMEType:textEncodingName:progress:success:failure:">&ndash;&nbsp;loadRequest:MIMEType:textEncodingName:progress:success:failure:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Asynchronously loads the data associated with a particular request with a specified MIME type and text encoding.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)loadRequest:(NSURLRequest *)<em>request</em> MIMEType:(nullable NSString *)<em>MIMEType</em> textEncodingName:(nullable NSString *)<em>textEncodingName</em> progress:(NSProgress *_Nullable __autoreleasing *_Nullable)<em>progress</em> success:(nullable NSData *( ^ ) ( NSHTTPURLResponse *response , NSData *data ))<em>success</em> failure:(nullable void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>request</code></th>
-						<td><p>A URL request identifying the location of the content to load. This must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>MIMEType</code></th>
-						<td><p>The MIME type of the content. Defaults to the content type of the response if not specified.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>textEncodingName</code></th>
-						<td><p>The IANA encoding name, as in <code>utf-8</code> or <code>utf-16</code>. Defaults to the response text encoding if not specified.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>progress</code></th>
-						<td><p>A progress object monitoring the current download progress.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>success</code></th>
-						<td><p>A block object to be executed when the request finishes loading successfully. This block returns the data to be loaded by the web view and takes two arguments: the response, and the downloaded data.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>failure</code></th>
-						<td><p>A block object to be executed when the data task finishes unsuccessfully, or that finishes successfully, but encountered an error while parsing the response data. This block has no return value and takes a single argument: the error that occurred.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UIWebView+AFNetworking.h</code></p>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
 			</div>
 			
 			
@@ -454,352 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Categories/UIWebView+AFNetworking/" data-id="cj3vd9k2b001274s6bhs99olu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Documents/index" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/index/" class="article-date">
-  <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>CTLog Reference</title>
-
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="hierarchy.html">Hierarchy</a></li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview-contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">CTLog Reference</h1>
-
-					
-
-					<div class="index-container">
-						
-
-						
-						<div class="index-column">
-							<h2 class="index-title">Class References</h2>
-							<ul>
-								
-								<li><a href="Classes/AFAutoPurgingImageCache.html">AFAutoPurgingImageCache</a></li>
-								
-								<li><a href="Classes/AFCompoundResponseSerializer.html">AFCompoundResponseSerializer</a></li>
-								
-								<li><a href="Classes/AFHTTPRequestSerializer.html">AFHTTPRequestSerializer</a></li>
-								
-								<li><a href="Classes/AFHTTPResponseSerializer.html">AFHTTPResponseSerializer</a></li>
-								
-								<li><a href="Classes/AFHTTPSessionManager.html">AFHTTPSessionManager</a></li>
-								
-								<li><a href="Classes/AFImageDownloadReceipt.html">AFImageDownloadReceipt</a></li>
-								
-								<li><a href="Classes/AFImageDownloader.html">AFImageDownloader</a></li>
-								
-								<li><a href="Classes/AFImageResponseSerializer.html">AFImageResponseSerializer</a></li>
-								
-								<li><a href="Classes/AFJSONRequestSerializer.html">AFJSONRequestSerializer</a></li>
-								
-								<li><a href="Classes/AFJSONResponseSerializer.html">AFJSONResponseSerializer</a></li>
-								
-								<li><a href="Classes/AFNetworkActivityIndicatorManager.html">AFNetworkActivityIndicatorManager</a></li>
-								
-								<li><a href="Classes/AFNetworkReachabilityManager.html">AFNetworkReachabilityManager</a></li>
-								
-								<li><a href="Classes/AFPropertyListRequestSerializer.html">AFPropertyListRequestSerializer</a></li>
-								
-								<li><a href="Classes/AFPropertyListResponseSerializer.html">AFPropertyListResponseSerializer</a></li>
-								
-								<li><a href="Classes/AFQueryStringPair.html">AFQueryStringPair</a></li>
-								
-								<li><a href="Classes/AFSecurityPolicy.html">AFSecurityPolicy</a></li>
-								
-								<li><a href="Classes/AFStreamingMultipartFormData.html">AFStreamingMultipartFormData</a></li>
-								
-								<li><a href="Classes/AFURLSessionManager.html">AFURLSessionManager</a></li>
-								
-								<li><a href="Classes/AFXMLDocumentResponseSerializer.html">AFXMLDocumentResponseSerializer</a></li>
-								
-								<li><a href="Classes/AFXMLParserResponseSerializer.html">AFXMLParserResponseSerializer</a></li>
-								
-								<li><a href="Classes/CTRemoteLogger.html">CTRemoteLogger</a></li>
-								
-								<li><a href="Classes/KWExample.html">KWExample</a></li>
-								
-								<li><a href="Classes/KWUserDefinedMatcher.html">KWUserDefinedMatcher</a></li>
-								
-								<li><a href="Classes/_AFURLSessionTaskSwizzling.html">_AFURLSessionTaskSwizzling</a></li>
-								
-							</ul>
-						</div>
-						
-
-						
-						<div class="index-column">
-							
-							<h2 class="index-title">Protocol References</h2>
-							<ul>
-								
-								<li><a href="Protocols/AFImageCache.html">AFImageCache</a></li>
-								
-								<li><a href="Protocols/AFImageRequestCache.html">AFImageRequestCache</a></li>
-								
-								<li><a href="Protocols/AFMultipartFormData.html">AFMultipartFormData</a></li>
-								
-								<li><a href="Protocols/AFURLRequestSerialization.html">AFURLRequestSerialization</a></li>
-								
-								<li><a href="Protocols/AFURLResponseSerialization.html">AFURLResponseSerialization</a></li>
-								
-							</ul>
-							
-
-							
-							<h2 class="index-title">Constant References</h2>
-							<ul>
-								
-									<li><a href="Constants/AFHTTPRequestQueryStringSerializationStyle.html">AFHTTPRequestQueryStringSerializationStyle</a></li>
-								
-									<li><a href="Constants/AFImageDownloadPrioritization.html">AFImageDownloadPrioritization</a></li>
-								
-									<li><a href="Constants/AFNetworkActivityManagerState.html">AFNetworkActivityManagerState</a></li>
-								
-									<li><a href="Constants/AFNetworkReachabilityStatus.html">AFNetworkReachabilityStatus</a></li>
-								
-									<li><a href="Constants/AFSSLPinningMode.html">AFSSLPinningMode</a></li>
-								
-									<li><a href="Constants/CTHttpNetWorkStatus.html">CTHttpNetWorkStatus</a></li>
-								
-									<li><a href="Constants/CTLogType.html">CTLogType</a></li>
-								
-									<li><a href="Constants/KWInequalityType.html">KWInequalityType</a></li>
-								
-							</ul>
-							
-
-							
-							<h2 class="index-title">Category References</h2>
-							<ul>
-								
-								<li><a href="Categories/UIActivityIndicatorView+AFNetworking.html">UIActivityIndicatorView(AFNetworking)</a></li>
-								
-								<li><a href="Categories/UIButton+AFNetworking.html">UIButton(AFNetworking)</a></li>
-								
-								<li><a href="Categories/UIImageView+AFNetworking.html">UIImageView(AFNetworking)</a></li>
-								
-								<li><a href="Categories/UIProgressView+AFNetworking.html">UIProgressView(AFNetworking)</a></li>
-								
-								<li><a href="Categories/UIRefreshControl+AFNetworking.html">UIRefreshControl(AFNetworking)</a></li>
-								
-								<li><a href="Categories/UIWebView+AFNetworking.html">UIWebView(AFNetworking)</a></li>
-								
-							</ul>
-							
-						</div>
-						
-					</div>
-
-					<footer>
-						<div class="footer-copyright">
-							
-							<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-							
-							
-							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-							
-						</div>
-					</footer>
-				</main>
-			</div>
-		</div>
-	</article>
-
-	<script src="js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/index/" data-id="cj3vd9k0n000274s6i49zu0q6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Documents/Blocks/AFNetworkActivityActionBlock" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/Blocks/AFNetworkActivityActionBlock/" class="article-date">
-  <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>AFNetworkActivityActionBlock Block Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="../index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
-	
-
-	
-
-	
-</select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">AFNetworkActivityActionBlock Block Reference</h1>
-
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Declared in</th>
-	<td>AFNetworkActivityIndicatorManager.m</td>
-</tr>
-						</tbody></table></div>
-					
-
-                    
-
-					
-
-                    
-                    
-          
-          <a title="Block Definition" name="instance_methods"></a>
-          <h4 class="method-subtitle parameter-title">Block Definition</h4>
-          <h3 class="subsubtitle method-title">AFNetworkActivityActionBlock</h3>
-
-
-<code>typedef void (^AFNetworkActivityActionBlock) (BOOL networkActivityIndicatorVisible)</code>
-  
-  
-  
-  
-          
-				</main>
-
-				<footer>
-					<div class="footer-copyright">
-						
-						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-						
-					</div>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFNetworkActivityActionBlock/" data-id="cj3vd9k18000374s6alayrmvj" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Protocols/AFURLResponseSerialization/" data-id="cj3vdcts9002283s6aa1smwgf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -933,7 +435,141 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFNetworkReachabilityStatusBlock/" data-id="cj3vd9k19000474s6625kvhvt" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFNetworkReachabilityStatusBlock/" data-id="cj3vdctqc000383s6wmkfsvdb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Blocks/AFNetworkActivityActionBlock" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Blocks/AFNetworkActivityActionBlock/" class="article-date">
+  <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFNetworkActivityActionBlock Block Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFNetworkActivityActionBlock Block Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>AFNetworkActivityIndicatorManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    
+          
+          <a title="Block Definition" name="instance_methods"></a>
+          <h4 class="method-subtitle parameter-title">Block Definition</h4>
+          <h3 class="subsubtitle method-title">AFNetworkActivityActionBlock</h3>
+
+
+<code>typedef void (^AFNetworkActivityActionBlock) (BOOL networkActivityIndicatorVisible)</code>
+  
+  
+  
+  
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFNetworkActivityActionBlock/" data-id="cj3vdctqd000483s6f1q2jtyt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1067,141 +703,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidBecomeDownloadTaskBlock/" data-id="cj3vd9k1a000574s6zwwzs0ne" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Documents/Blocks/AFQueryStringSerializationBlock" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/Blocks/AFQueryStringSerializationBlock/" class="article-date">
-  <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>AFQueryStringSerializationBlock Block Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="../index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
-	
-
-	
-
-	
-</select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">AFQueryStringSerializationBlock Block Reference</h1>
-
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Declared in</th>
-	<td>AFURLRequestSerialization.m</td>
-</tr>
-						</tbody></table></div>
-					
-
-                    
-
-					
-
-                    
-                    
-          
-          <a title="Block Definition" name="instance_methods"></a>
-          <h4 class="method-subtitle parameter-title">Block Definition</h4>
-          <h3 class="subsubtitle method-title">AFQueryStringSerializationBlock</h3>
-
-
-<code>typedef NSString* (^AFQueryStringSerializationBlock) (NSURLRequest *request, id parameters, NSError *__autoreleasing, * error)</code>
-  
-  
-  
-  
-          
-				</main>
-
-				<footer>
-					<div class="footer-copyright">
-						
-						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-						
-					</div>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFQueryStringSerializationBlock/" data-id="cj3vd9k1b000674s6kfqwqw2u" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidBecomeDownloadTaskBlock/" data-id="cj3vdctqd000583s6tepn4c10" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1335,7 +837,141 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidReceiveDataBlock/" data-id="cj3vd9k1c000774s6iudk9ufb" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidReceiveDataBlock/" data-id="cj3vdctqe000683s6ge551uyt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Blocks/AFQueryStringSerializationBlock" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Blocks/AFQueryStringSerializationBlock/" class="article-date">
+  <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFQueryStringSerializationBlock Block Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFQueryStringSerializationBlock Block Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>AFURLRequestSerialization.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    
+          
+          <a title="Block Definition" name="instance_methods"></a>
+          <h4 class="method-subtitle parameter-title">Block Definition</h4>
+          <h3 class="subsubtitle method-title">AFQueryStringSerializationBlock</h3>
+
+
+<code>typedef NSString* (^AFQueryStringSerializationBlock) (NSURLRequest *request, id parameters, NSError *__autoreleasing, * error)</code>
+  
+  
+  
+  
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFQueryStringSerializationBlock/" data-id="cj3vdctqf000783s6rtkhwvhi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1469,7 +1105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidReceiveResponseBlock/" data-id="cj3vd9k1g000874s6cggodq2y" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidReceiveResponseBlock/" data-id="cj3vdctqi000883s6f08xtd9u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1603,7 +1239,141 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskWillCacheResponseBlock/" data-id="cj3vd9k1h000974s6400a2zie" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDataTaskWillCacheResponseBlock/" data-id="cj3vdctqj000983s6rafb0lej" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Blocks/AFURLSessionDidBecomeInvalidBlock" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Blocks/AFURLSessionDidBecomeInvalidBlock/" class="article-date">
+  <time datetime="2017-06-06T08:01:37.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFURLSessionDidBecomeInvalidBlock Block Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFURLSessionDidBecomeInvalidBlock Block Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>AFURLSessionManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    
+          
+          <a title="Block Definition" name="instance_methods"></a>
+          <h4 class="method-subtitle parameter-title">Block Definition</h4>
+          <h3 class="subsubtitle method-title">AFURLSessionDidBecomeInvalidBlock</h3>
+
+
+<code>typedef void (^AFURLSessionDidBecomeInvalidBlock) (NSURLSession *session, NSError *error)</code>
+  
+  
+  
+  
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Blocks/AFURLSessionDidBecomeInvalidBlock/" data-id="cj3vdctqk000a83s65l8wrmh8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1651,11 +1421,11 @@
           </li>
         
           <li>
-            <a href="/2017/06/06/Documents/Categories/UIWebView+AFNetworking/">(no title)</a>
+            <a href="/2017/06/06/Documents/Protocols/AFURLResponseSerialization/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2017/06/06/Documents/index/">(no title)</a>
+            <a href="/2017/06/06/Documents/Blocks/AFNetworkReachabilityStatusBlock/">(no title)</a>
           </li>
         
           <li>
@@ -1663,7 +1433,7 @@
           </li>
         
           <li>
-            <a href="/2017/06/06/Documents/Blocks/AFNetworkReachabilityStatusBlock/">(no title)</a>
+            <a href="/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidBecomeDownloadTaskBlock/">(no title)</a>
           </li>
         
       </ul>

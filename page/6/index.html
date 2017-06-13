@@ -61,700 +61,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Documents/Classes/AFJSONRequestSerializer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/Classes/AFJSONRequestSerializer/" class="article-date">
-  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>AFJSONRequestSerializer Class Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="../index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
-	
-
-	
-	
-	<option value="tasks">Tasks</option>
-	
-	
-
-	
-	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/writingOptions">writingOptions</option>
-		
-	</optgroup>
-	
-
-	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/serializer">+ serializer</option>
-		
-		<option value="//api/name/serializerWithWritingOptions:">+ serializerWithWritingOptions:</option>
-		
-	</optgroup>
-	
-
-	
-	
-</select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">AFJSONRequestSerializer Class Reference</h1>
-
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Inherits from</th>
-	<td><a href="../Classes/AFHTTPRequestSerializer.html">AFHTTPRequestSerializer</a> : NSObject</td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>AFURLRequestSerialization.h<br>AFURLRequestSerialization.m</td>
-</tr>
-						</tbody></table></div>
-					
-
-                    
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>AFJSONRequestSerializer</code> is a subclass of <a href="../Classes/AFHTTPRequestSerializer.html"><code>AFHTTPRequestSerializer</code></a> that encodes parameters as JSON using <code>NSJSONSerialization</code>, setting the <code>Content-Type</code> of the encoded request to <code>application/json</code>.</p>
-					</div>
-					
-					
-
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/writingOptions" title="writingOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/writingOptions">&nbsp;&nbsp;writingOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for writing the request JSON data from Foundation objects. For possible values, see the <code>NSJSONSerialization</code> documentation section &ldquo;NSJSONWritingOptions&rdquo;. <code>0</code> by default.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSJSONWritingOptions writingOptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/serializerWithWritingOptions:" title="serializerWithWritingOptions:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/serializerWithWritingOptions:">+&nbsp;serializerWithWritingOptions:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates and returns a JSON <a href="#//api/name/serializer">serializer</a> with specified reading and writing options.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)serializerWithWritingOptions:(NSJSONWritingOptions)<em>writingOptions</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>writingOptions</code></th>
-						<td><p>The specified JSON writing options.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/serializer" title="serializer"></a>
-	<h3 class="method-title"><code><a href="#//api/name/serializer">+&nbsp;serializer</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates and returns a serializer with default configuration.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)serializer</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
-					
-
-                    
-                    
-          
-				</main>
-
-				<footer>
-					<div class="footer-copyright">
-						
-						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-						
-					</div>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFJSONRequestSerializer/" data-id="cj3vd9k2l001b74s6gsu768q1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Documents/Classes/AFPropertyListRequestSerializer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/Classes/AFPropertyListRequestSerializer/" class="article-date">
-  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>AFPropertyListRequestSerializer Class Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="../index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
-	
-
-	
-	
-	<option value="tasks">Tasks</option>
-	
-	
-
-	
-	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/format">format</option>
-		
-		<option value="//api/name/writeOptions">writeOptions</option>
-		
-	</optgroup>
-	
-
-	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/serializer">+ serializer</option>
-		
-		<option value="//api/name/serializerWithFormat:writeOptions:">+ serializerWithFormat:writeOptions:</option>
-		
-	</optgroup>
-	
-
-	
-	
-</select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">AFPropertyListRequestSerializer Class Reference</h1>
-
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Inherits from</th>
-	<td><a href="../Classes/AFHTTPRequestSerializer.html">AFHTTPRequestSerializer</a> : NSObject</td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>AFURLRequestSerialization.h<br>AFURLRequestSerialization.m</td>
-</tr>
-						</tbody></table></div>
-					
-
-                    
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>AFPropertyListRequestSerializer</code> is a subclass of <a href="../Classes/AFHTTPRequestSerializer.html"><code>AFHTTPRequestSerializer</code></a> that encodes parameters as JSON using <code>NSPropertyListSerializer</code>, setting the <code>Content-Type</code> of the encoded request to <code>application/x-plist</code>.</p>
-					</div>
-					
-					
-
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/format" title="format"></a>
-	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The property list format. Possible values are described in &ldquo;NSPropertyListFormat&rdquo;.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSPropertyListFormat format</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/writeOptions" title="writeOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/writeOptions">&nbsp;&nbsp;writeOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The <code>writeOptions</code> property is currently unused.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSPropertyListWriteOptions writeOptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> The <code>writeOptions</code> property is currently unused.</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/serializerWithFormat:writeOptions:" title="serializerWithFormat:writeOptions:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/serializerWithFormat:writeOptions:">+&nbsp;serializerWithFormat:writeOptions:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates and returns a property list <a href="#//api/name/serializer">serializer</a> with a specified <a href="#//api/name/format">format</a>, read options, and write options.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)serializerWithFormat:(NSPropertyListFormat)<em>format</em> writeOptions:(NSPropertyListWriteOptions)<em>writeOptions</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>format</code></th>
-						<td><p>The property list <a href="#//api/name/format">format</a>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>writeOptions</code></th>
-						<td><p>The property list write options.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> The <a href="#//api/name/writeOptions"><code>writeOptions</code></a> property is currently unused.</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/serializer" title="serializer"></a>
-	<h3 class="method-title"><code><a href="#//api/name/serializer">+&nbsp;serializer</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates and returns a serializer with default configuration.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)serializer</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
-					
-
-                    
-                    
-          
-				</main>
-
-				<footer>
-					<div class="footer-copyright">
-						
-						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-						
-					</div>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFPropertyListRequestSerializer/" data-id="cj3vd9k2n001e74s698wok397" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Documents/Classes/AFNetworkReachabilityManager" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/06/06/Documents/Classes/AFNetworkReachabilityManager/" class="article-date">
@@ -1588,7 +894,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFNetworkReachabilityManager/" data-id="cj3vd9k2v001g74s66yg1m8c1" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFNetworkReachabilityManager/" data-id="cj3vdctrl001e83s60k79o41h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1598,9 +904,9 @@ the later update, resulting in the listener being left in the wrong state.</p></
 
 
   
-    <article id="post-Documents/Classes/AFPropertyListResponseSerializer" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Documents/Classes/AFQueryStringPair" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/06/Documents/Classes/AFPropertyListResponseSerializer/" class="article-date">
+    <a href="/2017/06/06/Documents/Classes/AFQueryStringPair/" class="article-date">
   <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
 </a>
     
@@ -1615,7 +921,162 @@ the later update, resulting in the listener being left in the wrong state.</p></
 <head>
 	<meta charset="utf-8">
 
-	<title>AFPropertyListResponseSerializer Class Reference</title>
+	<title>AFQueryStringPair Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	
+
+	
+	
+
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFQueryStringPair Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AFURLRequestSerialization.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Returns a percent-escaped string following RFC 3986 for a query string key or value.
+RFC 3986 states that the following characters are &ldquo;reserved&rdquo; characters.
+    - General Delimiters: &ldquo;:&rdquo;, &ldquo;#&rdquo;, &ldquo;[&rdquo;, &ldquo;]&rdquo;, &ldquo;@&rdquo;, &ldquo;?&rdquo;, &ldquo;/&rdquo;
+    - Sub-Delimiters: &ldquo;!&rdquo;, &ldquo;$&rdquo;, &ldquo;&amp;&rdquo;, &ldquo;&lsquo;&rdquo;, &ldquo;(&rdquo;, &ldquo;)&rdquo;, &ldquo;*&rdquo;, &ldquo;+&rdquo;, &ldquo;,&rdquo;, &ldquo;;&rdquo;, &ldquo;=&rdquo;</p>
+
+<p>In RFC 3986 - Section 3.4, it states that the &ldquo;?&rdquo; and &ldquo;/&rdquo; characters should not be escaped to allow
+query strings to include a URL. Therefore, all &ldquo;reserved&rdquo; characters with the exception of &ldquo;?&rdquo; and &ldquo;/&rdquo;
+should be percent-escaped in the query string.
+    - parameter string: The string to be percent-escaped.
+    - returns: The percent-escaped string.</p>
+					</div>
+					
+					
+
+					
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFQueryStringPair/" data-id="cj3vdctrm001f83s6sfpd4jtn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Classes/AFPropertyListRequestSerializer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Classes/AFPropertyListRequestSerializer/" class="article-date">
+  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFPropertyListRequestSerializer Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -1670,7 +1131,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
 		
 		<option value="//api/name/format">format</option>
 		
-		<option value="//api/name/readOptions">readOptions</option>
+		<option value="//api/name/writeOptions">writeOptions</option>
 		
 	</optgroup>
 	
@@ -1680,7 +1141,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
 		
 		<option value="//api/name/serializer">+ serializer</option>
 		
-		<option value="//api/name/serializerWithFormat:readOptions:">+ serializerWithFormat:readOptions:</option>
+		<option value="//api/name/serializerWithFormat:writeOptions:">+ serializerWithFormat:writeOptions:</option>
 		
 	</optgroup>
 	
@@ -1699,16 +1160,16 @@ the later update, resulting in the listener being left in the wrong state.</p></
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">AFPropertyListResponseSerializer Class Reference</h1>
+					<h1 class="title">AFPropertyListRequestSerializer Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/AFHTTPResponseSerializer.html">AFHTTPResponseSerializer</a> : NSObject</td>
+	<td><a href="../Classes/AFHTTPRequestSerializer.html">AFHTTPRequestSerializer</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>AFURLResponseSerialization.h<br>AFURLResponseSerialization.m</td>
+	<td>AFURLRequestSerialization.h<br>AFURLRequestSerialization.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -1718,14 +1179,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>AFPropertyListResponseSerializer</code> is a subclass of <a href="../Classes/AFHTTPResponseSerializer.html"><code>AFHTTPResponseSerializer</code></a> that validates and decodes XML responses as an <code>NSXMLDocument</code> objects.</p>
-
-<p>By default, <code>AFPropertyListResponseSerializer</code> accepts the following MIME types:</p>
-
-<ul>
-<li><code>application/x-plist</code></li>
-</ul>
-
+						<p><code>AFPropertyListRequestSerializer</code> is a subclass of <a href="../Classes/AFHTTPRequestSerializer.html"><code>AFHTTPRequestSerializer</code></a> that encodes parameters as JSON using <code>NSPropertyListSerializer</code>, setting the <code>Content-Type</code> of the encoded request to <code>application/x-plist</code>.</p>
 					</div>
 					
 					
@@ -1775,15 +1229,15 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/readOptions" title="readOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/readOptions">&nbsp;&nbsp;readOptions</a></code>
+	<a name="//api/name/writeOptions" title="writeOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeOptions">&nbsp;&nbsp;writeOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1793,12 +1247,12 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The property list reading options. Possible values are described in &ldquo;NSPropertyListMutabilityOptions.&rdquo;</p>
+				<p>The <code>writeOptions</code> property is currently unused.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSPropertyListReadOptions readOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSPropertyListWriteOptions writeOptions</code></div>
 
 		    
 			
@@ -1807,6 +1261,11 @@ the later update, resulting in the listener being left in the wrong state.</p></
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> The <code>writeOptions</code> property is currently unused.</p></div>
+			</div>
 			
 
 			
@@ -1816,15 +1275,15 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/serializerWithFormat:readOptions:" title="serializerWithFormat:readOptions:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/serializerWithFormat:readOptions:">+&nbsp;serializerWithFormat:readOptions:</a></code>
+	<a name="//api/name/serializerWithFormat:writeOptions:" title="serializerWithFormat:writeOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serializerWithFormat:writeOptions:">+&nbsp;serializerWithFormat:writeOptions:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1839,7 +1298,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)serializerWithFormat:(NSPropertyListFormat)<em>format</em> readOptions:(NSPropertyListReadOptions)<em>readOptions</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)serializerWithFormat:(NSPropertyListFormat)<em>format</em> writeOptions:(NSPropertyListWriteOptions)<em>writeOptions</em></code></div>
 
 		    
 			
@@ -1853,8 +1312,8 @@ the later update, resulting in the listener being left in the wrong state.</p></
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>readOptions</code></th>
-						<td><p>The property list reading options.</p></td>
+						<th scope="row" class="argument-name"><code>writeOptions</code></th>
+						<td><p>The property list write options.</p></td>
 					</tr>
 				
 				</table>
@@ -1866,6 +1325,11 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> The <a href="#//api/name/writeOptions"><code>writeOptions</code></a> property is currently unused.</p></div>
+			</div>
+			
 
 			
 
@@ -1874,7 +1338,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
 			</div>
 			
 			
@@ -1923,649 +1387,6 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
-					
-
-                    
-                    
-          
-				</main>
-
-				<footer>
-					<div class="footer-copyright">
-						
-						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-						
-					</div>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFPropertyListResponseSerializer/" data-id="cj3vd9k2w001h74s68k7wfd04" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Documents/Classes/AFStreamingMultipartFormData" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/Classes/AFStreamingMultipartFormData/" class="article-date">
-  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>AFStreamingMultipartFormData Class Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="../index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
-	
-
-	
-	
-	<option value="tasks">Tasks</option>
-	
-	
-
-	
-	
-
-	
-
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/appendPartWithFileData:name:fileName:mimeType:">- appendPartWithFileData:name:fileName:mimeType:</option>
-		
-		<option value="//api/name/appendPartWithFileURL:name:error:">- appendPartWithFileURL:name:error:</option>
-		
-		<option value="//api/name/appendPartWithFileURL:name:fileName:mimeType:error:">- appendPartWithFileURL:name:fileName:mimeType:error:</option>
-		
-		<option value="//api/name/appendPartWithFormData:name:">- appendPartWithFormData:name:</option>
-		
-		<option value="//api/name/appendPartWithHeaders:body:">- appendPartWithHeaders:body:</option>
-		
-		<option value="//api/name/appendPartWithInputStream:name:fileName:length:mimeType:">- appendPartWithInputStream:name:fileName:length:mimeType:</option>
-		
-		<option value="//api/name/throttleBandwidthWithPacketSize:delay:">- throttleBandwidthWithPacketSize:delay:</option>
-		
-	</optgroup>
-	
-	
-</select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">AFStreamingMultipartFormData Class Reference</h1>
-
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Inherits from</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Conforms to</th>
-	<td><a href="../Protocols/AFMultipartFormData.html">AFMultipartFormData</a></td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>AFURLRequestSerialization.m</td>
-</tr>
-						</tbody></table></div>
-					
-
-                    
-
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/appendPartWithFileURL:name:error:" title="appendPartWithFileURL:name:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appendPartWithFileURL:name:error:">&ndash;&nbsp;appendPartWithFileURL:name:error:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Appends the HTTP header <code>Content-Disposition: file; filename=#{generated filename}; name=#{name}"</code> and <code>Content-Type: #{generated mimeType}</code>, followed by the encoded file data and the multipart form boundary.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)appendPartWithFileURL:(NSURL *)<em>fileURL</em> name:(NSString *)<em>name</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fileURL</code></th>
-						<td><p>The URL corresponding to the file whose content will be appended to the form. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>name</code></th>
-						<td><p>The name to be associated with the specified data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If an error occurs, upon return contains an <code>NSError</code> object that describes the problem.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p><code>YES</code> if the file data was successfully appended, otherwise <code>NO</code>.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The filename and MIME type for this data in the form will be automatically generated, using the last path component of the <code>fileURL</code> and system associated MIME type for the <code>fileURL</code> extension, respectively.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/appendPartWithFileURL:name:fileName:mimeType:error:" title="appendPartWithFileURL:name:fileName:mimeType:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appendPartWithFileURL:name:fileName:mimeType:error:">&ndash;&nbsp;appendPartWithFileURL:name:fileName:mimeType:error:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Appends the HTTP header <code>Content-Disposition: file; filename=#{filename}; name=#{name}"</code> and <code>Content-Type: #{mimeType}</code>, followed by the encoded file data and the multipart form boundary.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)appendPartWithFileURL:(NSURL *)<em>fileURL</em> name:(NSString *)<em>name</em> fileName:(NSString *)<em>fileName</em> mimeType:(NSString *)<em>mimeType</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fileURL</code></th>
-						<td><p>The URL corresponding to the file whose content will be appended to the form. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>name</code></th>
-						<td><p>The name to be associated with the specified data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fileName</code></th>
-						<td><p>The file name to be used in the <code>Content-Disposition</code> header. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>mimeType</code></th>
-						<td><p>The declared MIME type of the file data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If an error occurs, upon return contains an <code>NSError</code> object that describes the problem.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p><code>YES</code> if the file data was successfully appended otherwise <code>NO</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/appendPartWithInputStream:name:fileName:length:mimeType:" title="appendPartWithInputStream:name:fileName:length:mimeType:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appendPartWithInputStream:name:fileName:length:mimeType:">&ndash;&nbsp;appendPartWithInputStream:name:fileName:length:mimeType:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Appends the HTTP header <code>Content-Disposition: file; filename=#{filename}; name=#{name}"</code> and <code>Content-Type: #{mimeType}</code>, followed by the data from the input stream and the multipart form boundary.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)appendPartWithInputStream:(NSInputStream *)<em>inputStream</em> name:(NSString *)<em>name</em> fileName:(NSString *)<em>fileName</em> length:(int64_t)<em>length</em> mimeType:(NSString *)<em>mimeType</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>inputStream</code></th>
-						<td><p>The input stream to be appended to the form data</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>name</code></th>
-						<td><p>The name to be associated with the specified input stream. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fileName</code></th>
-						<td><p>The filename to be associated with the specified input stream. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>length</code></th>
-						<td><p>The length of the specified input stream in bytes.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>mimeType</code></th>
-						<td><p>The MIME type of the specified data. (For example, the MIME type for a JPEG image is image/jpeg.) For a list of valid MIME types, see <a href="http://www.iana.org/assignments/media-types/." target="_blank" rel="external">http://www.iana.org/assignments/media-types/.</a> This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/appendPartWithFileData:name:fileName:mimeType:" title="appendPartWithFileData:name:fileName:mimeType:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appendPartWithFileData:name:fileName:mimeType:">&ndash;&nbsp;appendPartWithFileData:name:fileName:mimeType:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Appends the HTTP header <code>Content-Disposition: file; filename=#{filename}; name=#{name}"</code> and <code>Content-Type: #{mimeType}</code>, followed by the encoded file data and the multipart form boundary.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)appendPartWithFileData:(NSData *)<em>data</em> name:(NSString *)<em>name</em> fileName:(NSString *)<em>fileName</em> mimeType:(NSString *)<em>mimeType</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>The data to be encoded and appended to the form data.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>name</code></th>
-						<td><p>The name to be associated with the specified data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fileName</code></th>
-						<td><p>The filename to be associated with the specified data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>mimeType</code></th>
-						<td><p>The MIME type of the specified data. (For example, the MIME type for a JPEG image is image/jpeg.) For a list of valid MIME types, see <a href="http://www.iana.org/assignments/media-types/." target="_blank" rel="external">http://www.iana.org/assignments/media-types/.</a> This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/appendPartWithFormData:name:" title="appendPartWithFormData:name:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appendPartWithFormData:name:">&ndash;&nbsp;appendPartWithFormData:name:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Appends the HTTP headers <code>Content-Disposition: form-data; name=#{name}"</code>, followed by the encoded data and the multipart form boundary.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)appendPartWithFormData:(NSData *)<em>data</em> name:(NSString *)<em>name</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>The data to be encoded and appended to the form data.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>name</code></th>
-						<td><p>The name to be associated with the specified data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/appendPartWithHeaders:body:" title="appendPartWithHeaders:body:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appendPartWithHeaders:body:">&ndash;&nbsp;appendPartWithHeaders:body:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Appends HTTP headers, followed by the encoded data and the multipart form boundary.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)appendPartWithHeaders:(NSDictionary *)<em>headers</em> body:(NSData *)<em>body</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>headers</code></th>
-						<td><p>The HTTP headers to be appended to the form data.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>body</code></th>
-						<td><p>The data to be encoded and appended to the form data. This parameter must not be <code>nil</code>.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/throttleBandwidthWithPacketSize:delay:" title="throttleBandwidthWithPacketSize:delay:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/throttleBandwidthWithPacketSize:delay:">&ndash;&nbsp;throttleBandwidthWithPacketSize:delay:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Throttles request bandwidth by limiting the packet size and adding a delay for each chunk read from the upload stream.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)throttleBandwidthWithPacketSize:(NSUInteger)<em>numberOfBytes</em> delay:(NSTimeInterval)<em>delay</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>numberOfBytes</code></th>
-						<td><p>Maximum packet size, in number of bytes. The default packet size for an input stream is 16kb.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>delay</code></th>
-						<td><p>Duration of delay each time a packet is read. By default, no delay is set.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>When uploading over a 3G or EDGE connection, requests may fail with &ldquo;request body stream exhausted&rdquo;. Setting a maximum packet size and delay according to the recommended values (<code>kAFUploadStream3GSuggestedPacketSize</code> and <code>kAFUploadStream3GSuggestedDelay</code>) lowers the risk of the input stream exceeding its allocated bandwidth. Unfortunately, there is no definite way to distinguish between a 3G, EDGE, or LTE connection over <code>NSURLConnection</code>. As such, it is not recommended that you throttle bandwidth based solely on network reachability. Instead, you should consider checking for the &ldquo;request body stream exhausted&rdquo; in a failure block, and then retrying the request with throttled bandwidth.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
 			</div>
 			
@@ -2604,266 +1425,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFStreamingMultipartFormData/" data-id="cj3vd9k2w001i74s6gyc1u8zd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Documents/Classes/AFXMLParserResponseSerializer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/06/Documents/Classes/AFXMLParserResponseSerializer/" class="article-date">
-  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<title>AFXMLParserResponseSerializer Class Reference</title>
-
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
-</head>
-<body class="appledoc">
-	<header>
-		<div class="container">
-			
-			<h1 id="library-title">
-				<a href="../index.html">CTLog </a>
-			</h1>
-
-			<p id="developer-home">
-				<a href="../index.html">Siemens</a>
-			</p>
-			
-		</div>
-	</header>
-
-	<aside>
-		<div class="container">
-			<nav>
-				<ul id="header-buttons" role="toolbar">
-					<li><a href="../index.html">Index</a></li>
-<li><a href="../hierarchy.html">Hierarchy</a></li>
-
-					<li id="on-this-page" role="navigation">
-						<label>
-							On This Page
-
-							<div class="chevron">
-								<div class="chevy chevron-left"></div>
-								<div class="chevy chevron-right"></div>
-							</div>
-
-							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
-	
-
-	
-	
-	<option value="tasks">Tasks</option>
-	
-	
-
-	
-	
-
-	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/serializer">+ serializer</option>
-		
-	</optgroup>
-	
-
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/responseObjectForResponse:data:error:">- responseObjectForResponse:data:error:</option>
-		
-	</optgroup>
-	
-	
-</select>
-						</label>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
-	<article>
-		<div id="overview_contents" class="container">
-			<div id="content">
-				<main role="main">
-					<h1 class="title">AFXMLParserResponseSerializer Class Reference</h1>
-
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Inherits from</th>
-	<td><a href="../Classes/AFHTTPResponseSerializer.html">AFHTTPResponseSerializer</a> : NSObject</td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>AFURLResponseSerialization.h<br>AFURLResponseSerialization.m</td>
-</tr>
-						</tbody></table></div>
-					
-
-                    
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>AFXMLParserResponseSerializer</code> is a subclass of <a href="../Classes/AFHTTPResponseSerializer.html"><code>AFHTTPResponseSerializer</code></a> that validates and decodes XML responses as an <code>NSXMLParser</code> objects.</p>
-
-<p>By default, <code>AFXMLParserResponseSerializer</code> accepts the following MIME types, which includes the official standard, <code>application/xml</code>, as well as other commonly-used types:</p>
-
-<ul>
-<li><code>application/xml</code></li>
-<li><code>text/xml</code></li>
-</ul>
-
-					</div>
-					
-					
-
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/serializer" title="serializer"></a>
-	<h3 class="method-title"><code><a href="#//api/name/serializer">+&nbsp;serializer</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates and returns a serializer with default configuration.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)serializer</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/responseObjectForResponse:data:error:" title="responseObjectForResponse:data:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/responseObjectForResponse:data:error:">&ndash;&nbsp;responseObjectForResponse:data:error:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (id)responseObjectForResponse:(NSHTTPURLResponse *)<em>response</em> data:(NSData *)<em>data</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
-					
-
-                    
-                    
-          
-				</main>
-
-				<footer>
-					<div class="footer-copyright">
-						
-						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
-						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
-						
-					</div>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<script src="../js/script.js"></script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFXMLParserResponseSerializer/" data-id="cj3vd9k2x001j74s61x703uqw" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFPropertyListRequestSerializer/" data-id="cj3vdctru001g83s6pkajw6i1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3543,7 +2105,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFSecurityPolicy/" data-id="cj3vd9k2x001k74s6p4w2q13p" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFSecurityPolicy/" data-id="cj3vdctru001h83s6qw48ah6i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3553,9 +2115,9 @@ the later update, resulting in the listener being left in the wrong state.</p></
 
 
   
-    <article id="post-Documents/Classes/KWExample" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Documents/Classes/AFPropertyListResponseSerializer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/06/Documents/Classes/KWExample/" class="article-date">
+    <a href="/2017/06/06/Documents/Classes/AFPropertyListResponseSerializer/" class="article-date">
   <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
 </a>
     
@@ -3570,7 +2132,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
 <head>
 	<meta charset="utf-8">
 
-	<title>KWExample Class Reference</title>
+	<title>AFPropertyListResponseSerializer Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -3610,6 +2172,8 @@ the later update, resulting in the listener being left in the wrong state.</p></
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -3619,15 +2183,25 @@ the later update, resulting in the listener being left in the wrong state.</p></
 
 	
 	
-
-	
-
-	
-	<optgroup label="Instance Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/pendingNotFinished">- pendingNotFinished</option>
+		<option value="//api/name/format">format</option>
+		
+		<option value="//api/name/readOptions">readOptions</option>
 		
 	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/serializer">+ serializer</option>
+		
+		<option value="//api/name/serializerWithFormat:readOptions:">+ serializerWithFormat:readOptions:</option>
+		
+	</optgroup>
+	
+
 	
 	
 </select>
@@ -3642,24 +2216,36 @@ the later update, resulting in the listener being left in the wrong state.</p></
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KWExample Class Reference</h1>
+					<h1 class="title">AFPropertyListResponseSerializer Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Conforms to</th>
-	<td>KWExampleNodeVisitor<br>KWReporting</td>
+	<td><a href="../Classes/AFHTTPResponseSerializer.html">AFHTTPResponseSerializer</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KWExample.h<br>KWExample.m</td>
+	<td>AFURLResponseSerialization.h<br>AFURLResponseSerialization.m</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AFPropertyListResponseSerializer</code> is a subclass of <a href="../Classes/AFHTTPResponseSerializer.html"><code>AFHTTPResponseSerializer</code></a> that validates and decodes XML responses as an <code>NSXMLDocument</code> objects.</p>
+
+<p>By default, <code>AFPropertyListResponseSerializer</code> accepts the following MIME types:</p>
+
+<ul>
+<li><code>application/x-plist</code></li>
+</ul>
+
+					</div>
+					
+					
 
 					
 					
@@ -3668,12 +2254,12 @@ the later update, resulting in the listener being left in the wrong state.</p></
 						
 
 						
-						
+						<h2 class="task-title">Other Methods</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/pendingNotFinished" title="pendingNotFinished"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pendingNotFinished">&ndash;&nbsp;pendingNotFinished</a></code>
+	<a name="//api/name/format" title="format"></a>
+	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3683,12 +2269,12 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Pending cases will be marked yellow by XCode as not finished, because their description differs for [SenTestCaseRun start] and [SenTestCaseRun stop] methods</p>
+				<p>The property list format. Possible values are described in &ldquo;NSPropertyListFormat&rdquo;.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)pendingNotFinished</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSPropertyListFormat format</code></div>
 
 		    
 			
@@ -3706,7 +2292,155 @@ the later update, resulting in the listener being left in the wrong state.</p></
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KWExample.m</code></p>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readOptions" title="readOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readOptions">&nbsp;&nbsp;readOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The property list reading options. Possible values are described in &ldquo;NSPropertyListMutabilityOptions.&rdquo;</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSPropertyListReadOptions readOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serializerWithFormat:readOptions:" title="serializerWithFormat:readOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serializerWithFormat:readOptions:">+&nbsp;serializerWithFormat:readOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a property list <a href="#//api/name/serializer">serializer</a> with a specified <a href="#//api/name/format">format</a>, read options, and write options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)serializerWithFormat:(NSPropertyListFormat)<em>format</em> readOptions:(NSPropertyListReadOptions)<em>readOptions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>format</code></th>
+						<td><p>The property list <a href="#//api/name/format">format</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>readOptions</code></th>
+						<td><p>The property list reading options.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/serializer" title="serializer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serializer">+&nbsp;serializer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a serializer with default configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)serializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
 			</div>
 			
 			
@@ -3744,7 +2478,266 @@ the later update, resulting in the listener being left in the wrong state.</p></
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/KWExample/" data-id="cj3vd9k2y001l74s6lfstavea" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFPropertyListResponseSerializer/" data-id="cj3vdctrv001i83s6kqesqs7i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Classes/AFXMLParserResponseSerializer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Classes/AFXMLParserResponseSerializer/" class="article-date">
+  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFXMLParserResponseSerializer Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/serializer">+ serializer</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/responseObjectForResponse:data:error:">- responseObjectForResponse:data:error:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFXMLParserResponseSerializer Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/AFHTTPResponseSerializer.html">AFHTTPResponseSerializer</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AFURLResponseSerialization.h<br>AFURLResponseSerialization.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AFXMLParserResponseSerializer</code> is a subclass of <a href="../Classes/AFHTTPResponseSerializer.html"><code>AFHTTPResponseSerializer</code></a> that validates and decodes XML responses as an <code>NSXMLParser</code> objects.</p>
+
+<p>By default, <code>AFXMLParserResponseSerializer</code> accepts the following MIME types, which includes the official standard, <code>application/xml</code>, as well as other commonly-used types:</p>
+
+<ul>
+<li><code>application/xml</code></li>
+<li><code>text/xml</code></li>
+</ul>
+
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/serializer" title="serializer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serializer">+&nbsp;serializer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a serializer with default configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)serializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/responseObjectForResponse:data:error:" title="responseObjectForResponse:data:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseObjectForResponse:data:error:">&ndash;&nbsp;responseObjectForResponse:data:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)responseObjectForResponse:(NSHTTPURLResponse *)<em>response</em> data:(NSData *)<em>data</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLResponseSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFXMLParserResponseSerializer/" data-id="cj3vdctrv001j83s6t0zwjtdf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3992,7 +2985,208 @@ the later update, resulting in the listener being left in the wrong state.</p></
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/CTRemoteLogger/" data-id="cj3vd9k2y001m74s6u0xy0e4n" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/CTRemoteLogger/" data-id="cj3vdctrw001k83s69wpw8csh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Classes/KWExample" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Classes/KWExample/" class="article-date">
+  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KWExample Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/pendingNotFinished">- pendingNotFinished</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KWExample Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>KWExampleNodeVisitor<br>KWReporting</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KWExample.h<br>KWExample.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/pendingNotFinished" title="pendingNotFinished"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pendingNotFinished">&ndash;&nbsp;pendingNotFinished</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pending cases will be marked yellow by XCode as not finished, because their description differs for [SenTestCaseRun start] and [SenTestCaseRun stop] methods</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)pendingNotFinished</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KWExample.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/KWExample/" data-id="cj3vdctrw001l83s6xrljrfc2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -4361,7 +3555,207 @@ the later update, resulting in the listener being left in the wrong state.</p></
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFXMLDocumentResponseSerializer/" data-id="cj3vd9k2z001n74s69sizofc1" class="article-share-link">Share</a>
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/AFXMLDocumentResponseSerializer/" data-id="cj3vdctrx001m83s6lzulr1wy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Documents/Classes/KWUserDefinedMatcher" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/Documents/Classes/KWUserDefinedMatcher/" class="article-date">
+  <time datetime="2017-06-06T08:01:36.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KWUserDefinedMatcher Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTLog </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Siemens</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/matcherMethodWithoutArguments">- matcherMethodWithoutArguments</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KWUserDefinedMatcher Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>KWMatcher : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KWUserDefinedMatcher.h<br>KWUserDefinedMatcher.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/matcherMethodWithoutArguments" title="matcherMethodWithoutArguments"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matcherMethodWithoutArguments">&ndash;&nbsp;matcherMethodWithoutArguments</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>TODO: find a way of doing this that:
+- doesn&rsquo;t require dummy methods (create the method signatures manually)
+- supports an unlimited number of arguments</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)matcherMethodWithoutArguments</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KWUserDefinedMatcher.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Siemens. All rights reserved. Updated: 2017-06-06</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank" rel="external">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nimomeng.github.io/2017/06/06/Documents/Classes/KWUserDefinedMatcher/" data-id="cj3vdctrx001n83s6936qk8n3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -4409,11 +3803,11 @@ the later update, resulting in the listener being left in the wrong state.</p></
           </li>
         
           <li>
-            <a href="/2017/06/06/Documents/Categories/UIWebView+AFNetworking/">(no title)</a>
+            <a href="/2017/06/06/Documents/Protocols/AFURLResponseSerialization/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2017/06/06/Documents/index/">(no title)</a>
+            <a href="/2017/06/06/Documents/Blocks/AFNetworkReachabilityStatusBlock/">(no title)</a>
           </li>
         
           <li>
@@ -4421,7 +3815,7 @@ the later update, resulting in the listener being left in the wrong state.</p></
           </li>
         
           <li>
-            <a href="/2017/06/06/Documents/Blocks/AFNetworkReachabilityStatusBlock/">(no title)</a>
+            <a href="/2017/06/06/Documents/Blocks/AFURLSessionDataTaskDidBecomeDownloadTaskBlock/">(no title)</a>
           </li>
         
       </ul>
